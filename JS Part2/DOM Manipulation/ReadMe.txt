@@ -1,0 +1,32 @@
+1.Write a script that creates a number of div elements.Each div element must have the following
+Random width and height between 20px and 100px
+Random background color
+Random font color
+Random position on the screen (position:absolute)
+A strong element with text "div" inside the div
+Random border-radius
+Random border color
+Random border-width between 1px and 20px
+
+
+
+2.Write a script that creates 5 div elements and moves them in circular path with interval of 100 milliseconds
+
+
+3.Write a script that shims querySelector and querySelectorAll in older browsers
+
+5.Create a tag cloud:
+Visualize a string of tags (strings) in a given container
+By given minFontSize and maxFontSize, generate the tags with different font-size, depending on the number of occurrences
+
+6.Create a TreeView component
+Initially only the top items must be visible
+On item click
+If its children are hidden (collapsed), they must be made visible (expanded)
+If its children are visible (expanded), they must be made hidden (collapsed)
+
+
+
+
+
+

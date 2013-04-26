@@ -1,0 +1,25 @@
+<!Document html>
+<html>
+	<head>
+        <style>
+            #container {
+                width: 250px;
+                background: #505050;
+            }
+            span {
+                display: inline-block;
+                margin: 5px 10px;
+				color: #EEEEFF;
+            }
+           
+        </style>
+		<script src="script.js"></script>
+	</head>
+	<body>
+         Min Font Size: <input type="text" id="minSize" />
+         Max Font Size: <input type="text" id="maxSize" />
+        <input type="button" value="Generate" onclick =" generateTags();" /> <br />
+        <textarea id="text" placeholder="your text here"></textarea>
+        <div id="container"></div>
+	</body>
+</html>
