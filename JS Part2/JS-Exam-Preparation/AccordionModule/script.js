@@ -1,6 +1,0 @@
-var controls = (function (){
-
-
-	
-
-}());

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Feed The Shark</title>
+    <style>
+        .container {
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 160px;
+            height: 160px;
+            float: left;
+            padding:10px;
+            margin:5px;
+        }
+
+            .container #first {
+                background-color: blue;
+            }
+
+            .container #second {
+                background-color: green;
+            }
+
+            .container #third {
+                background-color: purple;
+            }
+
+            .container #first, .container #second, .container #third {
+                float: left;
+                height: 60px;
+                width: 60px;
+                border-radius:5px;
+                user-select:none;
+                text-align:center;
+                vertical-align:central;
+                color:white;
+                font-weight:bold; 
+                text-align:center;
+                margin:2px;
+            }
+
+            .newClass{
+
+                background: orange;
+            }
+
+            #shark{
+                width: 145px;
+                height: 120px;
+                float: left;
+                margin-left: 20px;
+            }
+
+            .closedMouth{
+                background: url('images/shark_closed_mouth.png') no-repeat;
+            }
+
+            .openedMouth{
+                background: url('images/shark_opened_mouth.png') no-repeat;
+            }
+
+
+            .little-fish{
+                width: 60px;
+                height: 31px;
+                background: url('images/little-fish.png') no-repeat;
+                float: left;
+                margin-top: 40px;
+            }
+
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function openMouth(){
+
+            document.getElementById("shark").className = "openedMouth";
+        }
+
+        function closeMouth(){
+            document.getElementById("shark").className = "closedMouth";
+        }
+     
+        function drag(ev) {
+            ev.dataTransfer.setData("dragged-id", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("dragged-id");
+            document.getElementById(data).style.display = "none";
+            //ev.target.appendChild(document.getElementById(data));
+        }
+        //240 125
+    </script>
+</head>
+<body>
+     
+     
+        <div id="fish1" class="little-fish" draggable="true" ondragstart="drag(event)"></div>
+        <div id="fish2" class="little-fish" draggable="true" ondragstart="drag(event)"></div>
+        <div id="fish3" class="little-fish" draggable="true" ondragstart="drag(event)"></div>
+        <div id="fish4" class="little-fish" draggable="true" ondragstart="drag(event)"></div>
+        <div id="fish5" class="little-fish" draggable="true" ondragstart="drag(event)"></div>
+     
+    <div id="shark" class="closedMouth" ondrop="drop(event); closeMouth()" ondragover="allowDrop(event); openMouth()">
+
+    </div>
+</body>
+</html>
