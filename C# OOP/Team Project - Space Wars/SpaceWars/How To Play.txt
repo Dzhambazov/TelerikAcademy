@@ -1,3 +1,5 @@
+password -  hahaha
+
 Left arrow - move left
 Right arrow - move right
 Space - shoot normal bullet
